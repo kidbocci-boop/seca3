@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SECA TUDO | Marca Desportiva Oficial Angola</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO / NAVBAR -->
+    <header class="header">
+        <div class="container nav-container">
+            <!-- LOGOTIPO AUMENTADO COM NOME AO LADO -->
+            <a href="#" class="logo">
+                <img src="images/logo.png.png" alt="SECA TUDO Logo" class="brand-logo">
+                <span class="logo-title">SECA TUDO</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#produtos">Coleção Desportiva</a>
+                <a href="#sobre">Sobre a Marca</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <button class="cart-btn" id="cartToggle">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- BANNER PRINCIPAL (HERO) -->
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="badge-tag">MARCA DESPORTIVA ANGOLANA</span>
+            <h1>Supera os Teus Limites com Alta Performance</h1>
+            <p>Vestuário e equipamentos desportivos de tecnologia dry-fit e secagem ultrarrápida para atletas e entusiastas em Angola.</p>
+            <a href="#produtos" class="btn btn-primary">Ver Coleção <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- SECÇÃO DE PRODUTOS DESPORTIVOS -->
+    <section class="products-section container" id="produtos">
+        <div class="section-title">
+            <h2>Equipamento Desportivo</h2>
+            <p>Escolhe os teus artigos de treino e finaliza a compra diretamente no WhatsApp</p>
+        </div>
+
+        <!-- FILTROS DE CATEGORIA -->
+        <div class="categories">
+            <button class="cat-btn active" data-filter="all">Todos</button>
+            <button class="cat-btn" data-filter="vestuario">Vestuário</button>
+            <button class="cat-btn" data-filter="toalhas">Toalhas Desportivas</button>
+            <button class="cat-btn" data-filter="acessorios">Acessórios de Treino</button>
+        </div>
+
+        <!-- GRID DE PRODUTOS -->
+        <div class="product-grid" id="productGrid">
+            <!-- Inserido via JS -->
+        </div>
+    </section>
+
+    <!-- SOBRE A MARCA DESPORTIVA -->
+    <section class="about-section" id="sobre">
+        <div class="container about-content">
+            <div class="about-text">
+                <h2>A Marca Desportiva SECA TUDO</h2>
+                <p>A SECA TUDO é uma marca angolana focada no desenvolvimento de equipamento desportivo de alta performance. Desenvolvemos vestuário de treino com tecidos respiráveis e toalhas ultraleves de secagem rápida para ginasistas, corredores e atletas de alto rendimento.</p>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-person-running"></i>
+                        <span>Tecnologia Dry-Fit & Absorção</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span>Entregas em Luanda e Províncias</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>Encomendas Rápidas no WhatsApp</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <a href="#" class="logo">
+                    <img src="images/logo.png.png" alt="SECA TUDO Logo" class="brand-logo footer-logo">
+                    <span class="logo-title footer-logo-title">SECA TUDO</span>
+                </a>
+                <p style="margin-top: 15px;">A tua marca desportiva de referência em Angola.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Atendimento ao Atleta</h4>
+                <p><i class="fa-solid fa-phone"></i> +244 923 000 000</p>
+                <p><i class="fa-brands fa-whatsapp"></i> +244 923 000 000</p>
+                <p><i class="fa-solid fa-location-dot"></i> Luanda, Angola</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SECA TUDO. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- CARRINHO LATERAL (DRAWER) -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-bag-shopping"></i> O Teu Equipamento</h3>
+            <button class="close-btn" id="cartClose">&times;</button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <!-- Itens via JS -->
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <strong id="cartTotal">0 Kz</strong>
+            </div>
+
+            <!-- FORMULÁRIO DE CHECKOUT -->
+            <form id="checkoutForm" class="checkout-form">
+                <h4>Dados para Entrega</h4>
+                <div class="form-group">
+                    <input type="text" id="custName" placeholder="Nome Completo *" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="custPhone" placeholder="Número de Telefone *" required>
+                </div>
+                <div class="form-group">
+                    <select id="custProvince" required>
+                        <option value="">Seleciona a Província *</option>
+                        <option value="Luanda">Luanda</option>
+                        <option value="Benguela">Benguela</option>
+                        <option value="Huambo">Huambo</option>
+                        <option value="Huíla">Huíla</option>
+                        <option value="Cabinda">Cabinda</option>
+                        <option value="Outra">Outra Província</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="custAddress" placeholder="Bairro / Endereço de Entrega *" required>
+                </div>
+                <div class="form-group">
+                    <select id="custPayment" required>
+                        <option value="Multicaixa Express">Multicaixa Express</option>
+                        <option value="Transferência Bancária">Transferência Bancária</option>
+                        <option value="Pagamento no Acto da Entrega">Pagamento no Acto da Entrega</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Enviar Encomenda no WhatsApp
+                </button>
+            </form>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
